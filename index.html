@@ -10,94 +10,114 @@
 
     <body>
 
-        <!-- Sidebar -->
-        <aside class="sidebar-container">
-            <div class="logo">
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Sidebar -->
+            <aside class="sidebar-container">
                 <div class="image">
                     <img src="assets/odin-lined.png" alt=""/>
                     <div class="brand">ODIN</div>
                 </div>
-            </div>
-        </aside>
+            </aside>
 
-        <!-- Message -->
-        <section class="message">
-            <h2 id="intro-heading">Information about reserve</h2>
-            <p>
-                This is a sample form. If you are going to reserve tickets to see the Opera,
-                fill the following form with your data and your preferences for the performance.
-            </p>
-            <p>Are you ready to discover the experience? <em>Make your reservation</em>
-        </section>
+            <main>
+                <!-- Message -->
+                <section class="message">
+                    <h2>Information about reserve</h2>
+                    <p>
+                        This is a sample form. If you are going to reserve tickets to see the Opera,
+                        fill the following form with your data and your preferences for the performance.
+                    </p>
+                    <p>Are you ready to discover the experience? <em>Make your reservation</em></p>
+                </section>
 
-        <!-- Form -->
-        <div class="form-container">
+                <!-- Form -->
+                <div class="form-container">
 
-            <!-- Header title -->
-            <h1>Reserve tickets</h1>
+                    <!-- Header title -->
+                    <h1>Reserve tickets</h1>
 
-            <!-- Form fields -->
-            <form action="">
-                <fieldset>
-                    <!-- Fields of the left side of the form -->
-                    <div class="form-group-left-side">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name">
-                        <label for="surname">Surname:</label>
-                        <input type="text" id="surname" name="surname">
-                        <label for="phoneNumber">Phone Number: </label>
-                        <input type="number" name="phoneNumber" id="phoneNumber" />
-                    </div>
-                </fieldset>
+                    <!-- Form fields -->
+                    <form action="#" method="post">
 
-                <fieldset>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
-                    <label for="password">Password: </label>
-                    <input type="password" name="password" id="password">
-                    <label for="confirmPassword">Confirm Password: </label>
-                    <input type="password" name="confirmPassword" id="confirmPassword" />
-                </fieldset>
+                        <fieldset>
+                            <legend>Personal details</legend>
+                            <!-- First half of the fields -->
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name">
+                                <label for="surname">Surname:</label>
+                                <input type="text" id="surname" name="surname">
+                                <label for="phoneNumber">Phone Number: </label>
+                                <input type="tel" name="phoneNumber" id="phoneNumber" />
+                            </div>
 
-                <fieldset>
-                    <legend>Details of the function</legend>
-                    <label for="date">Date of the function</label>
+                            <!-- Second half of the fields-->
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email">
+                                <label for="password">Password: </label>
+                                <input type="password" name="password" id="password">
+                                <label for="confirmPassword">Confirm Password: </label>
+                                <input type="password" name="confirmPassword" id="confirmPassword" />
+                            </div>
+                        </fieldset>
 
-                    <label for="time">Time</label>
-                    <select name="time" id="time">
-                        <option value="">Select a time please</option>
-                        <option value="17:30">17:30</option>
-                        <option value="19:00">19:00</option>
-                        <option value="20:30">20:30</option>
-                    </select>
+                        <!-- Details -->
+                        <fieldset>
+                            <legend>Details of the function</legend>
+                            <div class="form-group">
+                                <label for="date">Date of the function</label>
+                                <select name="date" id="date">
+                                    <option value="">Select a date please</option>
+                                    <option value="December 15th">December 15th</option>
+                                    <option value="December 16th">December 16th</option>
+                                    <option value="December 17th">December 17th</option>
+                                </select>
+                                <label for="time">Time</label>
+                                <select name="time" id="time">
+                                    <option value="">Select a time please</option>
+                                    <option value="17:30">17:30</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="20:30">20:30</option>
+                                </select>
+                            </div>
 
-                    <label for="tickets">Numnber of tickets</label>
-                    <input type="number" id="tickets" name="tickets" min="1" max="10" value="1" />
+                            <div class="form-group">
+                                <label for="tickets">Number of tickets</label>
+                                <input type="number" id="tickets" name="tickets" min="1" max="10" value="1" />
 
-                    <label for="seatType">Area / Seat type</label>
-                    <select id="seatType" name="seatType">
-                        <option value="">Select an area</option>
-                        <option value="stalls">Stalls</option>
-                        <option value="balcony">Balcony</option>
-                        <option value="vip">VIP</option>
-                    </select>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Confirm ticket</legend>
-                    <label for="terms" class="checkbox-label">
-                    <input type="checkbox" id="terms" name="terms" />
-                    I agree to the buying terms and privacy policy
-                    </label>
-                </fieldset>
-                
-                <!-- Confirm button -->
-                <div class="button-section">
-                    <button type="submit">Create Account</button>
-                    <p>Already have an account? <a href="#">Log in</a></p>
+                                <label for="seatType">Area / Seat type</label>
+                                <select id="seatType" name="seatType">
+                                    <option value="">Select an area</option>
+                                    <option value="stalls">Stalls</option>
+                                    <option value="balcony">Balcony</option>
+                                    <option value="vip">VIP</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend>Confirm ticket</legend>
+                            <div class="confirm">
+                                <label for="terms" class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" />
+                                    I agree to the buying terms and privacy policy
+                                </label>
+                            </div>
+                        </fieldset>
+                        
+                        <!-- Confirm button -->
+                        <div class="button-section">
+                            <button type="submit">Reserve tickets</button>
+                            <p>Already have an account? <a href="#">Log in</a></p>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </main>
         </div>
+
         <script src="js/script.js"></script>
     </body>
 
