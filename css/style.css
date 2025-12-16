@@ -140,24 +140,35 @@ body, html{
 .form-group select {
   font-family: 'GaramondCustom';
   flex: 1;
-  padding: 8px 12px;
+  padding: 8px 16px;
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .form-group input:focus,
 .form-group select:focus {
-  outline: none;
   border-color: var(--primary);
 }
 
-form.submitted .form-group input:invalid,
-form.submitted .form-group select:invalid {
+input.error,
+select.error {
   border: 2px solid var(--error);
 }
 
-form.submitted input[type="number"]:invalid {
+.error-message {
+  color: var(--error);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+
+.error-message:empty {
+  display: none;
+}
+
+input.error,
+select.error {
   border: 2px solid var(--error);
 }
 
@@ -187,6 +198,15 @@ legend {
 .checkbox-label input[type="checkbox"] {
   border: 1px solid var(--border-color);
   margin-right: 20px;
+}
+
+.checkbox-label.error {
+  color: var(--error);
+}
+
+.checkbox-label.error input {
+  outline: 2px solid var(--error);
+  outline-offset: 2px;
 }
 
 /* Final section, styles for reveserve tickets button and Log in text */
@@ -226,8 +246,4 @@ button[type="submit"]:hover {
 
 .button-section a:hover {
   color: var(--primary-hover);
-}
-
-.button-section a:active{
-  color: var(--active);
 }
