@@ -1,0 +1,233 @@
+/* Best practices */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "GaramondCustom";
+  src: url("../fonts/garamond/garamond.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Norse";
+  src: url("../fonts/norse/Norsebold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Color variables */
+:root {
+  --primary: #007bff;
+  --primary-hover: #0056b3;
+  --border-color: #E5E7EB;
+  --surface: #FFFFFF;
+  --message-header: #333;
+  --message-paragraph: #555;
+  --form-title: #222;
+  --error: #FF0000;
+  --active: #004a99;
+}
+
+/* Page styles */
+body, html{
+  height: 100%;
+  margin: 0;
+}
+
+/* Styles for container */
+.container{
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar styles*/
+.sidebar-container{
+  display: flex;
+  width: 450px;
+  min-height: 100vh;
+  background: url('../assets/201215133156-01-san-carlo-theatre-naples-2015.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-direction: column;
+}
+
+/* Sidebar image styles*/
+.image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 0;
+  flex: 1;
+}
+
+/* Brand logo */
+.image > .brand{
+  font-family: "Norse", Helvetica, sans-serif;
+  font-size: 88px;
+  color: var(--surface);
+}
+
+/* Image height */
+.image > img{
+  height: 180px;
+}
+
+/* Message styles */
+.message {
+  font-family: 'GaramondCustom';
+  padding: 20px;
+  background-color: var(--border-color);
+}
+
+.message h2{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: var(--message-header);
+}
+
+.message p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: var(--message-paragraph);
+}
+
+/* Form font */
+.form-container{
+  font-family: 'GaramondCustom';
+}
+
+/* Form styles */
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: var(--form-title);
+}
+
+/* Group form fields */
+.form-group {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+/* Label style in each .form-group */
+.form-group label {
+  min-width: 150px;
+  font-weight: bold;
+  margin-right: 10px;
+  text-align: right;
+}
+
+/* Inputs and selects of each .form-group */
+.form-group input,
+.form-group select {
+  font-family: 'GaramondCustom';
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+form.submitted .form-group input:invalid,
+form.submitted .form-group select:invalid {
+  border: 2px solid var(--error);
+}
+
+form.submitted input[type="number"]:invalid {
+  border: 2px solid var(--error);
+}
+
+/* Resets each fieldset */
+fieldset{
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Legend text styles */
+legend {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 1rem 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  border: 1px solid var(--border-color);
+  margin-right: 20px;
+}
+
+/* Final section, styles for reveserve tickets button and Log in text */
+.button-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Submit button */
+button[type="submit"] {
+  font-family: 'GaramondCustom';
+  padding: 12px 30px;
+  background-color: var(--primary);
+  color: var(--surface);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Login link */
+.button-section p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.button-section a {
+  margin-bottom: 20px;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.button-section a:hover {
+  color: var(--primary-hover);
+}
+
+.button-section a:active{
+  color: var(--active);
+}
