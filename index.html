@@ -17,7 +17,7 @@
             <!-- Sidebar -->
             <aside class="sidebar-container">
                 <div class="image">
-                    <img src="assets/odin-lined.png" alt=""/>
+                    <img src="assets/odin-lined.png"/>
                     <div class="brand">ODIN</div>
                 </div>
             </aside>
@@ -47,21 +47,25 @@
                             <!-- First half of the fields -->
                             <div class="form-group">
                                 <label for="name">Name:</label>
-                                <input type="text" id="name" name="name">
+                                <input type="text" name="name">
+                                
                                 <label for="surname">Surname:</label>
-                                <input type="text" id="surname" name="surname">
+                                <input type="text" name="surname">
+                                
                                 <label for="phoneNumber">Phone Number: </label>
-                                <input type="tel" name="phoneNumber" id="phoneNumber" />
+                                <input type="tel" name="phoneNumber">
                             </div>
 
                             <!-- Second half of the fields-->
                             <div class="form-group">
                                 <label for="email">Email:</label>
-                                <input type="email" id="email" name="email">
+                                <input type="email" name="email">
+                                
                                 <label for="password">Password: </label>
-                                <input type="password" name="password" id="password">
+                                <input type="password" name="password">
+                                
                                 <label for="confirmPassword">Confirm Password: </label>
-                                <input type="password" name="confirmPassword" id="confirmPassword" />
+                                <input type="password" name="confirmPassword">
                             </div>
                         </fieldset>
 
@@ -69,15 +73,17 @@
                         <fieldset>
                             <legend>Details of the function</legend>
                             <div class="form-group">
+                                
                                 <label for="date">Date of the function: </label>
-                                <select name="date" id="date">
+                                <select name="date">
                                     <option value="">Select a date please</option>
                                     <option value="December 15th">December 15th</option>
                                     <option value="December 16th">December 16th</option>
                                     <option value="December 17th">December 17th</option>
                                 </select>
+                                
                                 <label for="time">Time: </label>
-                                <select name="time" id="time">
+                                <select name="time">
                                     <option value="">Select a time please</option>
                                     <option value="17:30">17:30</option>
                                     <option value="19:00">19:00</option>
@@ -87,10 +93,10 @@
 
                             <div class="form-group">
                                 <label for="tickets">Number of tickets: </label>
-                                <input type="number" id="tickets" name="tickets" min="1" max="10" value="1" />
+                                <input type="number" name="tickets" min="1">
 
                                 <label for="seatType">Area / Seat type: </label>
-                                <select id="seatType" name="seatType">
+                                <select name="seatType">
                                     <option value="">Select an area</option>
                                     <option value="stalls">Stalls</option>
                                     <option value="balcony">Balcony</option>
@@ -101,15 +107,15 @@
                         
                         <fieldset>
                             <legend>Confirm ticket</legend>
-                            <div class="confirm">
+                            <div>
                                 <label for="terms" class="checkbox-label">
-                                <input type="checkbox" id="terms" name="terms" />
+                                <input type="checkbox" name="terms" />
                                     I agree to the buying terms and privacy policy
                                 </label>
                             </div>
                         </fieldset>
                         
-                        <!-- Confirm button -->
+                        <!-- Reserve tickets button -->
                         <div class="button-section">
                             <button type="submit">Reserve tickets</button>
                             <p>Already have an account? <a href="#">Log in</a></p>
