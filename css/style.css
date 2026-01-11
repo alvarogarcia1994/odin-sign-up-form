@@ -12,7 +12,7 @@
 @font-face {
   font-family: "GaramondCustom";
   src: url("../fonts/garamond/garamond.ttf") format("truetype");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -20,7 +20,7 @@
 @font-face {
   font-family: "Norse";
   src: url("../fonts/norse/Norsebold.otf") format("opentype");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -47,6 +47,7 @@ body, html{
 /* Styles for container */
 .container{
   display: flex;
+  flex-direction: row;
   min-height: 100vh;
 }
 
@@ -74,7 +75,7 @@ body, html{
 
 /* Brand logo */
 .image > .brand{
-  font-family: "Norse", Helvetica, sans-serif;
+  font-family: "Norse", sans-serif;
   font-size: 88px;
   color: var(--surface);
 }
@@ -86,7 +87,7 @@ body, html{
 
 /* Message styles */
 .message {
-  font-family: 'GaramondCustom';
+  font-family: 'GaramondCustom', serif;
   padding: 20px;
   background-color: var(--border-color);
 }
@@ -138,7 +139,7 @@ body, html{
 /* Inputs and selects of each .form-group */
 .form-group input,
 .form-group select {
-  font-family: 'GaramondCustom';
+  font-family: 'GaramondCustom', serif;
   flex: 1;
   padding: 8px 16px;
   border: 1px solid var(--border-color);
@@ -151,20 +152,9 @@ body, html{
   border-color: var(--primary);
 }
 
-input.error,
-select.error {
-  border: 2px solid var(--error);
-}
-
-.error-message {
-  color: var(--error);
+.error-message{
   font-size: 14px;
-  margin-top: 4px;
-}
-
-
-.error-message:empty {
-  display: none;
+  color: var(--error);
 }
 
 input.error,
@@ -200,13 +190,9 @@ legend {
   margin-right: 20px;
 }
 
-.checkbox-label.error {
-  color: var(--error);
-}
-
 .checkbox-label.error input {
-  outline: 2px solid var(--error);
-  outline-offset: 2px;
+  outline: 1px solid var(--error);
+  outline-offset: 1px;
 }
 
 /* Final section, styles for reveserve tickets button and Log in text */
